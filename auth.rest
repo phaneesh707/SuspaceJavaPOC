@@ -1,0 +1,25 @@
+###
+@baseURL=http://localhost:8080/api/v1/auth 
+
+###
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+    "email":"ank@protonmail.com",
+    "password":"ankur",
+    "companyId":1
+}
+
+###
+POST {{baseURL}}/signup
+Content-Type: application/json
+
+{
+    "email":"ank@protonmail.com",
+    "name":"Ank",
+    "password":"ankur",
+    "photoURL":"https://lh3.googleus",
+    "desc":"I am a developer",
+    "companyId":1
+}
