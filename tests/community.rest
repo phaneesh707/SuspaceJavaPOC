@@ -6,8 +6,8 @@ POST {{baseURL}}
 Content-Type: application/json
 
 {
-    "name": "Community 2",
-    "descr": "Community 2",
+    "name": "Community 1",
+    "descr": "Community 1",
     "companyId":1,
     "logoURL":"http://www.google.com",
     "bannerURL":"http://www.google.com"
