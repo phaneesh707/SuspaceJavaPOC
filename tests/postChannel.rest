@@ -7,7 +7,7 @@ POST {{baseURL}}
 Content-Type: application/json
 
 {
-  "name": "test2",
+  "name": "test1",
   "communityId": 1,
     "entryFee":342,
     "logoURL":"2342",
