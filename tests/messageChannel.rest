@@ -7,7 +7,7 @@ POST {{baseURL}}
 Content-Type: application/json
 
 {
-  "name": "message-channel-2",
+  "name": "message-channel-1",
   "communityId": 1,
     "entryFee":342,
     "logoURL":"pgogoURL",

@@ -2,7 +2,6 @@ package com.subspaceclone.backend.Model;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
 
 @Entity
 @DiscriminatorValue("MESSAGE")
