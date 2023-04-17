@@ -1,0 +1,37 @@
+
+
+@baseURL=http://localhost:8080/api/v1/messageChannel
+
+#### CREATE MESSAGE CHANNEL
+POST {{baseURL}}
+Content-Type: application/json
+
+{
+  "name": "message-channel-2",
+  "communityId": 1,
+    "entryFee":342,
+    "logoURL":"pgogoURL",
+    "isDm":false
+}
+
+### GET MESSAGE CHANNEL BY ID
+GET {{baseURL}}/1
+
+### GET ALL MESSAGE IN COMMUNITY
+GET {{baseURL}}/community/1
+
+### EDIT MESSAGE CHANNEL
+PUT {{baseURL}}/1
+Content-Type: application/json
+
+{
+  "name": "message-channel-x",
+  "communityId": 1,
+    "entryFee":3422,
+    "logoURL":"logoURL",
+    "isDm":false
+}
+
+
+### DELETE MESSAGE CHANNEL
+DELETE {{baseURL}}/2
