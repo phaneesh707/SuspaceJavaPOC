@@ -1,0 +1,41 @@
+
+### 
+@baseURL=http://localhost:8080/api/v1/post 
+
+
+### Create post
+POST {{baseURL}}/create
+Content-Type: application/json
+
+{
+    "title": "My first post-2",
+    "content": "This is my first post",
+    "imgURL": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "communityId":1,
+    "userId":1,
+    "postChannelId":2
+}
+
+
+
+### CREATE REPLY POST
+POST {{baseURL}}/create/1/reply
+Content-Type: application/json
+
+{
+    "title": "My first reply post",
+    "content": "This is my first post",
+    "imgURL": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    "communityId":1,
+    "userId":1,
+    "postChannelId":1
+}
+
+### GET POST BY ID
+GET {{baseURL}}/3
+
+### GET POSTS BY COMMUNITY
+GET {{baseURL}}/community/1
+
+#### GET POSTS IN POSTS CHANNEL
+GET {{baseURL}}/channel/1
