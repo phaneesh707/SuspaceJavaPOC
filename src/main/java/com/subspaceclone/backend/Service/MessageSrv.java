@@ -2,7 +2,6 @@ package com.subspaceclone.backend.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,12 +38,10 @@ public class MessageSrv {
         User sender = userSrv.findUserById(senderId);
         MessageChannel channel = messageChannelSrv.getMessageChannel(channelId);
         Message message = new Message();
-        LocalDateTime currentDateTime = LocalDateTime.now();
         message.setContent(content);
         message.setImgUrl(imgUrl);
         message.setUser(sender);
         message.setMessageChannel(channel);
-        message.setCreatedAt(currentDateTime);
         return messageRepo.save(message);
     }
 
