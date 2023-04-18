@@ -2,6 +2,7 @@ package com.subspaceclone.backend.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,12 +52,15 @@ public class PostSrv {
         User user = userSrv.findUserById(userId);
         PostChannel postChannel = postChannelSrv.getPostChannel(postChannelId);
         Post post = new Post();
+        LocalDateTime currentDateTime = LocalDateTime.now();
+
         post.setTitle(title);
         post.setContent(content);
         post.setImgURL(imgURL);
         post.setCommunity(community);
         post.setUser(user);
         post.setPostChannel(postChannel);
+        post.setCreatedAt(currentDateTime);
         return postRepository.save(post);
     }
 
