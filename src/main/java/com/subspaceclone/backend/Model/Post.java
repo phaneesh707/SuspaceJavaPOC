@@ -12,10 +12,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.SequenceGenerator;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Entity
 @Data
@@ -31,10 +33,13 @@ public class Post {
     private String title;
     private String content;
     private String imgURL;
-
-    @CreatedDate
     private LocalDateTime createdAt;
 
+    @PrePersist
+    protected void onCreate(){
+        createdAt = LocalDateTime.now();
+    }
+    
     @ManyToOne
     @JoinColumn(name = "community_id", nullable = true)
     @OnDelete(action = OnDeleteAction.CASCADE)
